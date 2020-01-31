@@ -10,13 +10,11 @@ use Yajra\DataTables\Facades\DataTables;
 class ControlEscolarController extends Controller
 {
     public function getControlEscolar(){
-        //$controlEscolar = controlEscolar::all();
         $controlEscolar = DB::table('control_escolars');
             return Datatables::of($controlEscolar)
                 ->addColumn('actions', 'controlEscolar/actions')
                 ->rawColumns(['actions'])
                 ->make(true);
-        //return response()->json($controlEscolar);
     }
     /**
      * Display a listing of the resource.

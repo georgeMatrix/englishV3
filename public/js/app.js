@@ -14314,6 +14314,7 @@ window.Vue = __webpack_require__(36);
 
 Vue.component('cliente-component', __webpack_require__(40));
 Vue.component('control-component', __webpack_require__(44));
+Vue.component('base-component', __webpack_require__(75));
 
 var app = new Vue({
   el: '#app'
@@ -64772,6 +64773,179 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(11)
+/* script */
+var __vue_script__ = __webpack_require__(76)
+/* template */
+var __vue_template__ = __webpack_require__(77)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/BaseDeDatosComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-52c15c0b", Component.options)
+  } else {
+    hotAPI.reload("data-v-52c15c0b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        this.tableBaseDatos();
+    },
+    data: function data() {
+        return {};
+    },
+
+    methods: {
+        tableBaseDatos: function tableBaseDatos() {
+            $(function () {
+                $('#baseDeDatos').DataTable({
+                    ajax: {
+                        url: 'api/getBaseDeDatos'
+                    },
+                    "columns": [{ title: 'No', data: 'id', name: 'id' }, { title: 'Grupo', data: 'grupo', name: 'grupo' }, { title: 'Grado', data: 'grado', name: 'grado' }, { title: 'Escolaridad', data: 'escolaridad', name: 'escolaridad' }, { title: 'No. de control', data: 'no_control', name: 'no_control' }, { title: 'Matricula', data: 'matricula', name: 'matricula' }, { title: 'Edad', data: 'edad', name: 'edad' }, { title: 'Incorporados', data: 'incorporados', name: 'incorporados' }, { title: 'nivel', data: 'nivel', name: 'nivel' }, { title: 'Horario Sep', data: 'horario_sep', name: 'horario_sep' }, { title: 'horario', data: 'horario', name: 'horario' }, { title: 'Nombre completo', data: 'nombre_completo', name: 'nombre_completo' }, { title: 'Fecha de ingreso', data: 'fecha_de_ingreso', name: 'fecha_de_ingreso' }, { title: 'Telefono casa u oficina', data: 'telefono_casa_oficina', name: 'telefono_casa_oficina' }, { title: 'Celular', data: 'celular', name: 'celular' }, { title: 'Facebook', data: 'facebook', name: 'facebook' }, { title: 'Fecha de nacimiento', data: 'fecha_de_nacimiento', name: 'fecha_de_nacimiento' }, { title: 'Edad', data: 'edad', name: 'edad' }, { title: 'Direccion', data: 'direccion', name: 'direccion' }, { title: 'Municipio', data: 'municipio', name: 'municipio' }, { title: 'E-mail', data: 'email', name: 'email' }, { title: 'Grado estudios', data: 'grado_estudios', name: 'grado_estudios' }, { title: 'Como te enteraste', data: 'como_te_enteraste', name: 'como_te_enteraste' }, { title: 'Opciones', data: 'actions' }],
+                    processing: true
+                });
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card card-default" }, [
+          _c("div", { staticClass: "text-right card-header" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { href: "baseDeDatos/create" }
+              },
+              [_vm._v("Nuevo")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body table-responsive" }, [
+      _c("table", {
+        staticClass:
+          "table table-striped table-bordered table-responsive-md table-responsive-lg table-responsive-sm",
+        attrs: { id: "baseDeDatos" }
+      })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-52c15c0b", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

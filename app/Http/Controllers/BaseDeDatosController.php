@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\BaseDeDatos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\Facades\DataTables;
 
 class BaseDeDatosController extends Controller
 {
+    public function getBaseDeDatos(){
+        $baseDatos = DB::table('base_de_datos');
+        return Datatables::of($baseDatos)
+            ->addColumn('actions', '$baseDatos/actions')
+            ->rawColumns(['actions'])
+            ->make(true);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,7 @@ class BaseDeDatosController extends Controller
      */
     public function index()
     {
-        //
+        return view('baseDeDatos/baseDeDatos');
     }
 
     /**
